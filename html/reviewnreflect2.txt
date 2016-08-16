@@ -1,0 +1,24 @@
+Client: The user that is looking/user your device or website. Anyone that is using a device that connects to the internet
+
+Server: The hosting hardware that your website or program is running on. Clients can access your website if it’s running 
+on a server through a domain.
+
+Render: It displays the code you created on your website. It “renders” it for the client to see.
+
+HTML is a Hypertext Markup language which is a set of symbols or codes that display on a web browser. In HTML there are tags, elements, nodes, attributes, block elements, inline elements.
+Tags are keywords in a web page that give your HTML order and where elements should go. They can include <header><footer><body><HTML> they are the barebones to make a site run. Elements are the other hand are what you put text into and other HTML attributes. These can include <h1> and <p> HTML attributes are what you add to elements to give them more meaning. Such as having an alt attribute added to <img>. In case that image doesn’t display, the text will run instead. Block elements are main elements in the body such as <p> while inline elements are nested within those block elements. They often times create emphasis on the material in the block such as adding bold or italics to words
+
+•	Head: includes important info about the doc. Stylesheets, title, formatting
+•	Body: where all the information and elements go. The main part of HTML
+•	P: this is a paragraph tag, usually text go in here and is formatted as if it was a paragraph
+•	Form: this is a form tag, information from a client goes here and gets sent to the server to process
+•	Div: this is a division tag, it divides areas of content in the body. Basically wrapper data so you can easily ID it.
+•	Span: a span tag, gives style to HTML. Often times it’s used in tables to span over table data and go into other columns and rows
+•	Select: this is used in forms to select multiple options
+•	h2: the second heading in a document
+•	ol: an ordered list of data with numbers
+•	ul: an unordered list of data which include dots
+•	table: a tabular form of data that is presented with rows and columns
+•	tr: this is the table row element, which is a row in a table
+•	td: this is the table data element, all your data goes here
+
