@@ -6,9 +6,9 @@ img {margin:auto;
      z-index: 3;}
 
 #glasses{position: relative;
-         z-index: 2;
-         }
+         z-index: 2;}
+
 #octopus{position: relative;
-          bottom: 9.8em;
-          right: 4px;
-          z-index: 1;}     
+         bottom: 9.8em;
+         right: 4px;
+         z-index: 1;}     
