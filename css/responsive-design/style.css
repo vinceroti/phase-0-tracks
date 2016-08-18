@@ -9,14 +9,17 @@ cite {
   margin-top: 10px;
 }
 
+#external-links {
+  display: inline-block;
+  vertical-align: top;
+}
+
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
-  width: 200px;
-  display: inline;
-  vertical-align: text-top;
-
+  width: 70%;
 }
+
 
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
@@ -36,9 +39,46 @@ figcaption {
 }
 
 body {
-  width: 960px;
+  max-width: 960px;
+  min-width: 320px;
 }
 
 main {
-  width: 756px;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+  width: 70%;
+
 }
+
+@media screen and (max-width: 320px){ 
+  h1 { 
+    font-size: 14px;
+  } 
+  body { padding-right: 12em;
+  }
+}
+
+
+/*@media screen and (max-width: 500px) {
+  body {
+  }
+
+
+}*/
+
+/*
+
+1. You can use margin:auto and text-align:center;
+to center the content to the middle of the page.
+
+2. Mobile first design is starting from the smallest screen
+and designing a web page from there and going up
+and getting more responsive with larger screens.
+
+3. Display means a element will stack next to other items while
+treating it as a block level element while float means moving 
+content either left or right. It can mess with the flow
+of a webpage.
+
+*/
