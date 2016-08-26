@@ -42,6 +42,5 @@ Watch Netflix Algorithm
   - Pick a show that you will like
   - If you are a certain mood scroll the the genre's and pick a show
   - Else, pick randomly
-  - Enjoy and eat that food.
-
+  - If you have food, cheer! Else, cry :(
 
