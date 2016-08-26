@@ -1,0 +1,47 @@
+Elevator Algorithm
+
+- Decide which floor to go to.
+
+- Walk forward to the elevator door
+  - If the number is higher then 10 you are going up hit the up button
+  - Else you are going down, then hit the down button
+
+- While waiting for the doors to open, do nothing
+ - Once the door opens, move forward and walk inside
+ - If the door takes longer then 30 seconds run the "Find Stairs Program"
+
+- While inside the elevator
+  - Turn left and walk towards Wall A 
+  - Turn left towards Wall D
+  - Move forward towards the numbered panel and stop just 1 foot away
+  - Press the floor number you decided to go to.
+  - If it is the bottom floor, pick the home or "starred" button.
+  - Walk back from Wall D 
+  - Step sideways from wall A toward the middle
+  - Wait
+  - Once the elevator doors open, walk forward and leave the elevator.
+
+
+Watch Netflix Algorithm
+
+- If you are outside, walk up the stairs towards the door, open the door and enter
+
+- While inside find your bedroom
+  - If you are in the kitchen, grab some food since it's movie time and you're hungry.
+
+- Once you are inside your room, lay on your bed and grab the remote and Xbox Controller.
+  - If TV is off, use the remote to turn it on
+  - If Xbox is off, use the controller to turn it on
+
+- Until Netflix is on 
+  - Use the Xbox controller to find the app "Netflix"
+  - Hit A on your controller to start up the app
+  - Wait until Netflix is running
+
+- If Netflix is running
+  - Pick a show that you will like
+  - If you are a certain mood scroll the the genre's and pick a show
+  - Else, pick randomly
+  - Enjoy and eat that food.
+
+
