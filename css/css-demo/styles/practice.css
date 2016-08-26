@@ -1,0 +1,31 @@
+#contact-info {font-size: .8em;}
+.job {
+  background-color: #e9e5dc;
+  border-radius: 10px;
+  padding-top: 5px;
+  margin: 2px;
+  padding-bottom: 10px;
+}
+
+ul {
+  font-size: .8em;
+}
+
+/*
+1. Cascading means styles cascade from one sheet to another allowing multiple sheets to be used in one html file. The Browser will choose the style that is placed first in the file.
+
+2. A pseudoselector defines when a certain action takes place on as element.
+ unvisited link 
+a:link {
+    color: #FF0000;
+}
+visited link
+a:visited {
+    color: #00FF00;
+}
+
+3. ul>li
+
+
+
+*/
