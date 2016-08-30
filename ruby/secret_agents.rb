@@ -3,7 +3,20 @@
 
 # encrypts the string provided
 
-def encrypt
+
+$alphabet = "abcdefghijklmnopqrstuvwxyza"
+
+def encrypt(word)
+  index = 0
+  result = ""
+  while index < $alphabet.length
+    result = $alphabet[word]
+    index += 1
+  end
+
+ p result[0].next
+ p result[1].next
+ p result[2].next
 
 end
 
@@ -13,5 +26,7 @@ def decrypt
   
 end
 
-encrypt
-decrypt
+encrypt("abc")
+encrypt("zed")
+#decrypt("bcd")
+#decrypt("afe")
