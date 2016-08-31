@@ -23,22 +23,22 @@ client = {
 puts "Welcome to the Interior Designer Database"
 puts "Please enter your client's information"
 
-puts "Name"
+puts "Name:"
 client[:name] = gets.chomp
 
-puts "Age" 
+puts "Age:" 
 client[:age] = gets.chomp.to_i
 
-puts "Address"
+puts "Address:"
 client[:address] = gets.chomp
 
-puts "Email"
+puts "Email:"
 client[:email] = gets.chomp
 
-puts "Phone"
+puts "Phone:"
 client[:phone] = gets.chomp.to_i
 
-puts "Are there children? (Yes or No)"
+puts "Are there children? (Yes or No):"
 client[:children] = gets.chomp.downcase
 
 #ensuring yes or no answer code
@@ -54,8 +54,48 @@ else
   client[:children] = false
 end
 
+puts "Decor Theme:"
+decor_theme = gets.chomp
 #debugging
 
-p client
+puts client
 
+puts "Would you like to update a key?"
 
+key_update = gets.chomp.downcase
+
+#case statement for the user to update it's code
+
+case key_update
+when :name
+  client[:name] = gets.chomp
+when :age
+  puts "Age:" 
+client[:age] = gets.chomp.to_i
+  when :address
+  puts "Address:"
+  client[:address] = gets.chomp
+when :email
+  puts "Email:"
+  client[:email] = gets.chomp
+when :phone
+  puts "Phone:"
+  client[:phone] = gets.chomp.to_i
+when :children
+  puts "Are there children? (Yes or No):"
+  client[:children] = gets.chomp.downcase
+  #ensuring yes or no answer code
+  until client[:children] == "yes" || client[:children] == "no"
+    puts "'Yes' or 'No' only"
+    client[:children] = gets.chomp.downcase
+  end
+  #checks input of child input
+  if client[:children] == 'yes'
+   client[:children] = true
+  else
+    client[:children] = false
+  end
+when :decor_theme
+  puts "Decor Theme:"
+  decor_theme = gets.chomp
+end
