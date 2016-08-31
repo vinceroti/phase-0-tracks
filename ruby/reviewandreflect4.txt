@@ -1,0 +1,62 @@
+Review and Reflect Ruby
+
+1. Variables act as storage locations for data in  a program. Programmers might use variables in order to save data they need or something a user enters such as a name or a date.
+
+2. Ruby will run the line full_name = first_name + last_name in the order of first_name + last_name first then putting that in first_name. the final result will be "AbrahamLincoln" and there is no space.
+
+3.
+string: is written input like a name. Used to store text data  name = "Vince"
+
+integer: is a number. Used for storing numeral data    age = 23
+
+float: is a number as well but with a decimal. Often used for precise numeral data
+                                                        age = 1.5 
+
+nil: Nil represents nothing. It's implicit since it's assigned to nothing. You
+can assign nil to a variable but you can only do it once. nothing = Nil
+
+boolean: This is a true or false data type. Very useful with loops and conditionals.
+lights = false 
+if lights == false
+  p "No one is home since the lights are off!"
+  else lights == true
+  p "Someone is home!"
+end
+
+4. It's a way for computers to handle complex tasks. It's a procedure that allows a computer to solve a problem. More precise the program is, the more precise the solution is.
+
+5. Searching and sorting
+
+6. A method is program within the program you are making. It's a set of tasks defined. 
+methods help with keeping clear reading code and using that code whenever need be without interfering with other code.
+
+7.
+
+return value: The value that the method comes up with.
+
+side effect: the side effect of a method. When a method runs, something else happens such as puts. When you run puts the side of effect is nil.
+
+parameters: A parameter is a variable in a method definition. method_name(parameter1, parameter2,…)
+
+Arguments: arguments are the data you pass into the method's parameters. 
+
+implicit return: implicit return is what ruby returns when there is no return defined. Such as nil.
+
+
+8. Global scope is everything in the program. It's the whole scope of it, you can define variables that can be used in all scopes in methods. Method scopes are more local, if you define a variable outside of a method and it's not global, you can't use it outside of that scope.
+
+9. Control flow is the order in which individual statements, instructions or calls are executed in a program. All of these include loop, if, else, elsif, while, and until.
+
+10.
+
+loop: this loop will run until a condition is met. Loop Do if condition break
+
+if: This is a conditional statement and if some sort of condition is met then it will run. If house = on_fire extinguish = true
+
+else: this is the backup to a if statement. If the If condition isn't met then this will happen instead. If house = on_fire extinguish = true else puts "yay, no fire"
+
+elsif: this is an add-on to the if statement and will run if the first condition isn't met but will allow for other conditions to happen instead of breaking. 
+
+while: A while loop will run while a condition is true. While house = on_fire extinguish = true. Once that condition is met, the fire will extinguish.
+
+until: an until loop is very similar to a while and breaks until something finishes. Until on_fire = false extinguish = true.
