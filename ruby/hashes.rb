@@ -42,6 +42,7 @@ puts "Are there children? (Yes or No):"
 client[:children] = gets.chomp.downcase
 
 #ensuring yes or no answer code
+
 until client[:children] == "yes" || client[:children] == "no"
   puts "'Yes' or 'No' only"
   client[:children] = gets.chomp.downcase
@@ -55,33 +56,33 @@ else
 end
 
 puts "Decor Theme:"
-decor_theme = gets.chomp
-#debugging
+client[:decor_theme] = gets.chomp
 
+#puts out hash data
 puts client
 
-puts "Would you like to update a key?"
+#allows user to update hash
+puts "Would you like to update a key? (enter name of key)"
 
-key_update = gets.chomp.downcase
+key_update = gets.chomp.to_sym
 
-#case statement for the user to update it's code
+#conditional statement for the user to update hash
 
-case key_update
-when :name
+if key_update == :name
   client[:name] = gets.chomp
-when :age
+elsif key_update == :age
   puts "Age:" 
 client[:age] = gets.chomp.to_i
-  when :address
+elsif key_update == :address
   puts "Address:"
   client[:address] = gets.chomp
-when :email
+elsif key_update == :email
   puts "Email:"
   client[:email] = gets.chomp
-when :phone
+elsif key_update == :phone
   puts "Phone:"
   client[:phone] = gets.chomp.to_i
-when :children
+elsif key_update == :children
   puts "Are there children? (Yes or No):"
   client[:children] = gets.chomp.downcase
   #ensuring yes or no answer code
@@ -95,7 +96,10 @@ when :children
   else
     client[:children] = false
   end
-when :decor_theme
+elsif key_update == :decor_theme
   puts "Decor Theme:"
   decor_theme = gets.chomp
 end
+
+#displays code again for user to see
+puts client
