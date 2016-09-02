@@ -10,8 +10,7 @@
 #bring arrays together after splitter and show user their new words
 
 def name_splitter()
-
-
+  
   #takes $full_name and splits it apart into two different arrays
   $first = $full_name.first
   $last = $full_name.delete_at(1)
@@ -26,7 +25,7 @@ def scrambler()
   scrambled_last = []
 
   #Iterates through array for first name in order to process AEIOU and Special Case Z=
- $first.each do |x| 
+  $first.each do |x| 
     if x == "a"
       x = "e"
       elsif x == "e"
@@ -68,20 +67,20 @@ def scrambler()
   $full_name = scrambled_last.join('').capitalize + " " + scrambled_first.join('').capitalize
 end
 
-def name_array() #makes arrays for first and last name and for new name
-  $names << $first.join('').capitalize + " " + $last.join('').capitalize
-  $names << $full_name[0..-1]
+def name_array(names) #makes arrays for first and last name and for new name
+  names << $first.join('').capitalize + " " + $last.join('').capitalize
+  names << $full_name[0..-1]
 end
 
-def name_hash() #converts array to hash and iterates through to display new names
-  hash_names = Hash[*$names]
+def name_hash(names) #converts array to hash and iterates through to display new names
+  hash_names = Hash[*names]
   hash_names.each do |name1, name2|
-    puts "#{name1} is now #{name2}"
+  puts "#{name1} is now #{name2}"
   end
 end
 
-#empty global array for data to fall too
-$names = []
+#empty array for data to fall into
+names = []
 
 #driver
 puts "Hello and welcome to the 2016 Alias Generator®"
@@ -100,11 +99,11 @@ while input != "quit"
 
   name_splitter()
   scrambler()
-  name_array()
+  name_array(names)
   puts "Thank you! You're new name is #{$full_name}"
   puts "Type 'Quit' if finished, if not hit enter"
   input = gets.chomp.downcase
 end
 
-name_hash()
+name_hash(names)
 puts "Goodbye."
