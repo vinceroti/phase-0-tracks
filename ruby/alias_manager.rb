@@ -69,18 +69,22 @@ end
 
 def data(full_name)
   names = {}
-  names[:name] = $full_name 
+  names[] += $full_name 
+  p names
 end
+
+
 #driver
 puts "Hello and welcome to the 2016 Alias Generator®"
+input = ""
 
-puts "Please enter your name:"
-puts "Type 'Quit' when finished"
-
-name_spliter($full_name)
-data($full_name)
-
-puts "Thank you! You're new name is #{$full_name}"
-
+while input != "quit"
+  puts "Please enter your name:"
+  name_spliter($full_name)
+  data($full_name)
+  puts "Thank you! You're new name is #{$full_name}"
+  puts "Type 'Quit' if finished, if not hit enter"
+  input = gets.chomp.downcase
+end
 
 puts "Goodbye."
