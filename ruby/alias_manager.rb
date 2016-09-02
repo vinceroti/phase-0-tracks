@@ -8,12 +8,32 @@
 #Split the array even further or make two different arrays for first and last
 #Change all the vowels to the next vowel then do the same consonants
 
+def name_spliter(full_name)
+
+  first = full_name.first
+  last = full_name.delete_at(1)
+  first = first.split('')
+  last = last.split('')
+
+  p first
+  p last
+
+  #first.map! { |aeiou| aeiou =~ /[aeiou]/}
+  last.map! { |letter| letter.next } 
+
+ # first.select { |aeiou| aeiou}
+
+   p first
+   p last
+end
 
 #driver
 puts "Hello and welcome to the 2016 Alias Generator®"
 
 puts "Please enter your name:"
-name = gets.chomp
+full_name = gets.chomp.split
 
-Puts "Thank you! You're new name is #{name}"
-Puts "Goodbye."
+name_spliter(full_name)
+
+puts "Thank you! You're new name is #{full_name}"
+puts "Goodbye."
