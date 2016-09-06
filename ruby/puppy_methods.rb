@@ -36,3 +36,34 @@ puppy.speak(3) #calls the speak method from class puppy
 puppy.roll_over #calls the roll_over method from class puppy
 puppy.dog_years(3) #calls the dog_years method from class puppy
 puppy.jump #calls the jump method from class puppy
+
+#Self Made Class Creation
+# ---------------------------------
+
+class Car
+
+  def start_car
+    puts "You started the car!"
+  end
+
+  def run_car(mph)
+    puts "You are driving #{mph} mph, wow!"
+  end
+
+  def stop_car
+    puts "You have turned off the car!"
+  end
+end
+
+car = Car.new #creates a new instance of car class
+car_array = Array.new #crates a new; instance of an array to put data into
+
+while car_array.length < 50 #runs loop 50 times and puts the car class into array 50 times
+  car_array << Car
+end
+
+car_array.each do |x| #iterates over array in order to run each class method 50 times
+  car.start_car
+  car.run_car(50)
+  car.stop_car
+end
