@@ -1,0 +1,48 @@
+Data Structures
+1. Why are data structures useful in programming?
+
+Data structures are useful in programming since they allow us to store data and access them whenever we need them, if we are storing a users credentials on a website this could be a good way to keep everything organized especially with hashes. We also can manipulate data structures. Copy, cloning, insertion, deletion, searching and sorting.
+
+Arrays
+2. Define "array" and describe the characteristics of an array.
+
+Arrays are data structures consisting of a collections of data or variables. You can access these variables through the index of an array. You can have nested hashes or arrays in arrays. Search, coping, insertion, and deletion are all features you can do with arrays.
+
+Arrays 
+
+3. Give two original examples of data sets that an array might be well-suited for.
+
+A list of monuments in the United States, all of the states in the United States, the grades in a classroom to find the average of the class, everyone who is in class, a list of bookmarks for your favorite websites. The uses of an array are infinite.
+
+Hashes
+4. Define "hash" and describe the characteristics of a hash.
+
+A hash is like array but with a Key (which is the name of your data) and Data. It allows users and developers to access information easier. Instead of calling an index like you would with an array you can call a key which is more descriptive. It allows for easier searching, coping, and insertion of data then an array.
+
+5. Give two original examples of data sets that a hash might be well-suited for.
+
+Listing the mountains in Colorado and the elevation of each one as well as other data associated like chair lifts, user reviews, location. This works really well with nested Data Structures.
+
+Abasin: 13000
+
+keystone: 12300 #etc
+
+Listing different types of Snowboards and who makes each other. Also another situation where nested data works really well and adding more keys for more details such as what terrain each one is good for and pricing of each one.
+
+Iteration
+6. Why is iteration useful?
+
+Iteration is very useful to go through an array of data or hash of data and manipulating it to work with your program. This allows use to change certain parts of our data structures with ease.
+
+7. Give an example of a real-life task that would require iteration if you wrote an algorithm for it.
+
+Go through a parking lot and looking for a license plate of a car. The parking lot would be an array and each license plate would be the data in the array. As you iterate through the parking lot you can list what spot that car is at (or the index)
+
+Blocks
+8. What is a block?
+
+A block is portable code that makes up its own little program, you can run a block as many times as you want to just like a method. .each .map are examples of blocks which allow iteration of data structures.
+
+9. What is a block parameter, and where does its value come from?
+
+With blocks, you create your own parameter within the | | (pipes) of the block. That parameter is based on the method or data you give it. [1,2,3,4,5].each { |x| p x } will go through that array and display X. Which is the data of that array.
