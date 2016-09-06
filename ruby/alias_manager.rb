@@ -19,7 +19,6 @@ def name_splitter()
 end
 
 def scrambler()
-  #splits the array in order to access all of the data
   #new array for iteration
   scrambled_first = []
   scrambled_last = []
@@ -59,7 +58,7 @@ def scrambler()
       elsif x == "z"
         x = "a"
       else 
-        x = x.next 
+        p x = x.next 
     end
   scrambled_last << x 
   end
