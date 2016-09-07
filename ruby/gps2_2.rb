@@ -55,11 +55,7 @@ def list_remover(item)
 end
 
 def list_updater(item, amount)
-  $grocery_hash.each do |key, value|
-    if key == item
-      value = amount
-    end
-  end
+  $grocery_hash[item] = amount
   p $grocery_hash
 end
 
