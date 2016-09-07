@@ -30,18 +30,32 @@
 # steps: iterate through grocery_hash and use INTERPERLATION to show the KEY and VALUE in pretty way
 # output: shows step above
 
-list = "apples oranges grapes apples milk paper"
 
 def list_creator(inputed_list)
-  grocery_hash = {}
+
+  $grocery_hash = {}
   grocery_list = inputed_list.split
 
   grocery_list.each do |item| 
-    grocery_hash[item] = grocery_hash[item].to_i + 1
+    $grocery_hash[item] = $grocery_hash[item].to_i + 1
   end
 
-  p grocery_hash
-
+  p $grocery_hash
+  return $grocery_hash
 end
 
-list_creator(list)
+def list_adder(item, amount)
+   $grocery_hash[item] = amount
+   p $grocery_hash
+end
+
+def list_remover(item)
+  $grocery_hash.delete(item)
+  p $grocery_hash
+end
+
+#Driver Code
+
+list_creator("apples oranges grapes apples milk paper")
+list_adder("pineapples", 4)
+list_remover("pineapples")
