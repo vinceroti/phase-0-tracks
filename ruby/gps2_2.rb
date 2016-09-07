@@ -54,8 +54,25 @@ def list_remover(item)
   p $grocery_hash
 end
 
+def list_updater(item, amount)
+  $grocery_hash.each do |key, value|
+    if key == item
+      value = amount
+    end
+  end
+  p $grocery_hash
+end
+
+def print
+  puts "Here is your Grocery List"
+  $grocery_hash.each do |item, amount|
+    puts "#{item}: #{amount}"
+  end
+end
 #Driver Code
 
 list_creator("apples oranges grapes apples milk paper")
 list_adder("pineapples", 4)
 list_remover("pineapples")
+list_updater("grapes" , 3)
+print
