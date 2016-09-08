@@ -6,6 +6,25 @@ class Santa
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
     @age = 0
   end
+  
+  #getter methods for attributes
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity 
+  end
+
+  def gender
+    @gender
+  end
+
+  #setter methods
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
 
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
@@ -24,29 +43,12 @@ class Santa
     @reindeer_ranking << reindeer_name
   end
 
-  #getter methods for attributes
-
-  def age
-    @age
-  end
-
-  def ethnicity
-    @ethnicity 
-  end
-
-  #setter methods
-
-  def gender=(new_gender)
-    @gender = new_gender
-  end
-
   #displays info about attributes
 
   def about 
    p @gender 
    p @ethnicity 
    p @age
-   p @reindeer_ranking
   end
 end
 #Driver Code
@@ -55,11 +57,12 @@ santa = Santa.new("Male", "White") #creates a new instance of Santa class
 
 santa.speak
 santa.eat_milk_and_cookies("sugar cookie")
-santa.about
-santa.celebrate_birthday
+puts "This Santa is #{santa.age}, #{santa.gender}, and is #{santa.ethnicity}."
 santa.gender = "Female"
 santa.get_mad_at("Vixen")
-santa.about
+santa.celebrate_birthday
+puts "This Santa is now #{santa.age} and is #{santa.gender}!"
+
 
 #Release 1
 santas = []
