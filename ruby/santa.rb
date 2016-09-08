@@ -1,5 +1,14 @@
 class Santa
 
+  #syntactic sugar allows access to methods and attributes outside of class without getter and setter
+  #getter 
+  attr_reader
+  :age :ethnicity
+
+  #setter/#getter
+  attr_accessor
+  :gender
+
   def initialize(gender, ethnicity) #passes data to attributes
     @gender = gender
     @ethnicity = ethnicity
@@ -8,22 +17,22 @@ class Santa
   end
   
   #getter methods for attributes
-  def age
-    @age
-  end
+  # def age
+  #   @age
+  # end
 
-  def ethnicity
-    @ethnicity 
-  end
+  # def ethnicity
+  #   @ethnicity 
+  # end
 
-  def gender
-    @gender
-  end
+  # def gender
+  #   @gender
+  # end
 
-  #setter methods
-  def gender=(new_gender)
-    @gender = new_gender
-  end
+  # #setter methods
+  # def gender=(new_gender)
+  #   @gender = new_gender
+  # end
 
 
   def speak
