@@ -1,0 +1,14 @@
+Define a class that is called Game
+set an initialize class that will take the user input from driver code and sets it to ATTRIBUTES
+
+each ATTRIBUTES that are set will have user input as one and the other user input as the other
+
+Set a guess METHOD inside the game CLASS that will determine how many guesses the user as entered and IF they are allowed to input more. 
+
+Guesses by user are determined by the LENGTH of the answer.
+
+IF user attempts the same guess, then the counter will not move up. Storing guesses in data structure will allow us to check if repeated input has happened. Making a separate method may help or storing it in guess method. 
+
+As the user makes correct guesses, have a new array that will fill in what the correct part of the answer they got right. Checking(iterating) over the array of as they guess will allow for the program to determine if the correct letter was picked.
+
+IF at any point the user passes the limit allowed set by the LENGTH of the STRING, stop the user from allowing more input. IF they guess the correct answer, show them they won. If they say the wrong input, taught them.
