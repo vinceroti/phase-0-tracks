@@ -1,7 +1,7 @@
 Define a class that is called Game
 set an initialize class that will take the user input from driver code and sets it to ATTRIBUTES
 
-each ATTRIBUTES that are set will have user input as one and the other user input as the other
+each ATTRIBUTES that are set will have user input as one and the other user input as the other. One for the answer and guessing.
 
 Set a guess METHOD inside the game CLASS that will determine how many guesses the user as entered and IF they are allowed to input more. 
 
