@@ -1,7 +1,7 @@
 require_relative 'game'
 
-describe Calculator do
-  let(:calculator) { Calculator.new }
+describe Game do
+  let(:game { Game.new([]) }
 
   it "adds two integers" do
     expect(calculator.add(3,4)).to eq 7
