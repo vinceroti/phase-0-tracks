@@ -1,13 +1,12 @@
 class Game
 
- attr_reader :player_array #allows read access to @player_array
- attr_accessor :counter, :answer_array #allows read/write access to @counter and @player_guess
+ attr_reader :player_array, :answer_array #allows read access to @player_array
+ attr_accessor :counter #allows read/write access to @counter
 
   def initialize(answer)
-    @answer_array_length = answer.length
-    @answer_array = answer
-    @counter = @answer_array_length
-    @player_array = Array.new(@answer_array_length, "_") #takes length of array and adds _ according to length
+    @answer_array = answer.split('')
+    @counter = @answer_array.length
+    @player_array = Array.new(@answer_array.length, "_") #takes length of array and adds _ according to length
     
   end
 
@@ -32,11 +31,8 @@ end
 #driver code
 
 puts "Welcome to Guesser 1.0!"
-puts "Please enter a word to guess for"
- 
-game = Game.new("")
 
-game.answer_array = gets.chomp.downcase.split('') #refactoring instead of direct parameter input to allow for rspec
+game = Game.new("vince") #rspec won't allow me to use gets.chomp for user input
 
 until game.counter == 0
   puts "Please enter your guess by letter"
