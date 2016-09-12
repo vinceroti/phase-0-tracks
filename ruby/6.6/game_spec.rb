@@ -1,21 +1,22 @@
-require_relative 'game'
+require_relative 'Game'
 
 describe Game do
-  let(:game { Game.new([]) }
+  let(:game) { Game.new(["v","i","n","c","e"]) }
 
-  it "adds two integers" do
-    expect(calculator.add(3,4)).to eq 7
+  it "checks if players guess is correct and prints status" do
+    game.guess("v")
+    game.status
+    expect(game.player_array).to eq ["v","_","_","_","_"]
   end
 
-  it "subtracts two integers" do
-    expect(calculator.subtract(7,1)).to eq 6
+  it "tells you status of game" do
+    game.status
+    expect(game.counter).to eq 5
   end
 
-  it "multiplies two integers" do
-    expect(calculator.multiply(2,3)).to eq 6
-  end
-
-  it "divides two integers" do
-    expect(calculator.divide(10,5)).to eq 2
-  end
+  it "checks if wrong answer will take away from counter and prints status" do
+    game.guess("f")
+    game.status
+    expect(game.counter).to eq 4
+  end  
 end
