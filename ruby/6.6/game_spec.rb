@@ -1,7 +1,7 @@
 require_relative 'Game'
 
 describe Game do
-  let(:game) { Game.new(["v","i","n","c","e"]) }
+  let(:game) { Game.new("vince") }
 
   it "checks if players guess is correct and prints status" do
     game.guess("v")
