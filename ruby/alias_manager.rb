@@ -11,50 +11,27 @@
 
 def scrambler(first, last, full_name_split)
   #new array for iteration
-  scrambled_first = []
-  scrambled_last = []
 
+  vowels = 'aeioua'
+  consonants = 'bcdfghjklmnpqrstvwxyzb'
   #Iterates through array for first name in order to process AEIOU and Special Case Z=
-  first.each do |x| 
-    if x == "a"
-      x = "e"
-      elsif x == "e"
-        x = "i"
-      elsif x == "i"
-        x = "o"
-      elsif x == "o"
-        x = "u"
-      elsif x == "u"
-        x = "a"
-      elsif x == "z"
-        x = "a"
-      else 
-        x = x.next 
-    end
-  scrambled_first << x 
+  first = first.gsub(/[aeiou]/)  do |v|
+     v = vowels[vowels.index(v)+1]
+  end
+  first = first.gsub(/[bcdfghjklmnpqrstvwxyz]/)  do |c|
+     c = consonants[consonants.index(c)+1]
+  end
+  #Iterates through array for last name in order to process AEIOU and Special Case Z
+  last = last.gsub(/[aeiou]/)  do |v|
+     v = vowels[vowels.index(v)+1]
   end
 
-  #Iterates through array for last name in order to process AEIOU and Special Case Z
-   last.each do |x| 
-    if x == "a"
-      x = "e"
-      elsif x == "e"
-        x = "i"
-      elsif x == "i"
-        x = "o"
-      elsif x == "o"
-        x = "u"
-      elsif x == "u"
-        x = "a"
-      elsif x == "z"
-        x = "a"
-      else 
-       x = x.next 
-    end
-  scrambled_last << x 
+  last = last.gsub(/[bcdfghjklmnpqrstvwxyz]/)  do |c|
+     c = consonants[consonants.index(c)+1]
   end
-  #fills $full_name array with scrambled first and last name, capitalizes both and joins them with a space.
-  return scrambled_last.join('').capitalize + " " + scrambled_first.join('').capitalize
+
+  #fills full_name array with scrambled first and last name, capitalizes both and joins them with a space.
+  return last.capitalize + " " + first.capitalize
 end
 
 def name_array(name_array, full_name, new_full_name)
@@ -91,10 +68,10 @@ while input != "quit"
 
   full_name = full_name_split[0].capitalize + " " + full_name_split[1].capitalize #capitalizes at index's
 
-  first = full_name_split.first.split('') #takes first of array and splits 
-  last = full_name_split.delete_at(1).split('') #deletes last name and stores into last and splits it
+  first = full_name_split.first #takes first of array and splits 
+  last = full_name_split.delete_at(1) #deletes last name and stores into last and splits it
   new_full_name = scrambler(first, last, full_name_split)
-  p names = name_array(name_array,full_name, new_full_name)
+  names = name_array(name_array,full_name, new_full_name)
   puts "Thank you! You're new name is #{new_full_name}"
   puts "Type 'Quit' if finished, if not hit enter"
   input = gets.chomp.downcase
