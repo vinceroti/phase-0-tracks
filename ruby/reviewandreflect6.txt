@@ -1,0 +1,43 @@
+1. What are classes? Be sure to define the following terms in your explanation and describe the relationships between them:
+
+class: a class is an instance of objects with attributes in order to perform tasks given by driver and test code
+
+state: state is the current state of the object you're calling
+
+behavior: behavior are methods of the class and acts with the state of the object.
+
+instance variable: instance variable is a variable within that instance of the class you're working with. You can change that variable outside the class if its writable or within the class
+
+instance method: These are methods of a class that only work with that instance of the class you're calling
+
+2. What are attributes? 
+
+Attributes are objects that are created within a class. These attributes define objects in that class and can be changed from outside the class if defined and within the class, in a method.
+
+3. Give an example of a real world object, and describe how you might assign its attributes if you were to design a class to represent that object.
+
+Class Bear
+
+  def initialize
+    @name = Yogi
+    @age = 9
+    @color = "brown"
+  end
+
+  def yell
+    "#{name} yells for baskets of food!"
+  end
+
+end
+
+4. What is the purpose of the initialize method? When does it run?
+
+The purpose of the initialize is to define all the attributes of the class from the start, you insert your own data when you initialize on the same line. Everything "initializes" when you call Class.new
+
+5. What are modules?
+
+Modules are pre-created programs, they are a collection of methods that you can use in other programs.
+
+6. What are the different ways you can use a module?
+
+If you are working on a big project and you find that code you used from a different program might be able to help you. If you create a module for that code then you can access that code from youre new program without having to redefine and repeat yourself.

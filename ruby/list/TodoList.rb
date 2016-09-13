@@ -1,6 +1,5 @@
 
 class TodoList
-  attr
 
   def initialize(list_arr)
     @list_arr = list_arr
