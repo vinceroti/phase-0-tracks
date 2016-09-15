@@ -33,3 +33,22 @@ first_car.maxSpeed();
 var second_car = new Car(2016, "Blue", "Toyota");
 
 console.log(second_car.color);
+
+// Looping through hashes
+
+// var cat = {
+//     name: "Mr. Whiskers",
+//     color: "orange",
+//     hair: "short",
+//     age: 2 
+// };
+
+// for(var x in cat){
+//     console.log(x + ": " + cat[x]);
+// }
+
+// outputs this:
+// name: Mr. Whiskers
+// color: orange
+// hair: short
+// age: 2
