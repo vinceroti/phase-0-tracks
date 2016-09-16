@@ -28,13 +28,20 @@
 function Length_Finder(array){
   var array = array; // sets the parameter to array
   var longest_word = ""; // empty string to store what the longest word is
+  var comparer = ""; // empty string to allow for more words to fall into
 
   for (var i = array.length - 1; i >= 0; i--) {
     if (longest_word.length < array[i].length) {
       longest_word = array[i]; // if the length of longest word is less then the word currently at the loops index then replace that word
-    };
+    }
   };
-  console.log(longest_word + " is the largest!"); // prints longest word
+  // another loop to determine if there are more words that are the same length as the longest_word but not the same word
+  for (var i = array.length - 1; i >= 0; i--) { 
+    if (longest_word != array[i] && longest_word.length == array[i].length) {
+      comparer += ", " + array[i]; // if the length of longest word is less then the word currently at the loops index then replace that word
+    }
+  };
+  console.log(longest_word + comparer + " are/is the largest!"); // prints longest word
 }
 
 function Key_Value(object1, object2){
