@@ -33,14 +33,14 @@
 
 def list_creator(inputed_list)
 
-  $grocery_hash = {}
+  grocery_hash = {}
   grocery_list = inputed_list.split
 
   grocery_list.each do |item| 
-    $grocery_hash[item] = $grocery_hash[item].to_i + 1
+    grocery_hash[item] = $grocery_hash[item].to_i + 1
   end
 
-  p $grocery_hash
+  p grocery_hash
   return $grocery_hash
 end
 
