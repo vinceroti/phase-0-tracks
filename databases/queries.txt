@@ -46,3 +46,17 @@ sqlite> select * from mountains;
 4|Mount Elbert|14440|Sawatch Range|true|3
 5|Mount Massive|14428|Sawatch Range|true|3
 6|Mount Rainier|14417|Cascade Range|true|4
+
+Release 3
+
+select mountains.mountain, united_states.id FROM mountains join united_states on mountains.state_id = united_states.id;
+Mount Whitney|2
+Mount Elbert|3
+Mount Massive|3
+Mount Rainier|4
+
+sqlite> select mountains.hike, united_states.state FROM mountains join united_states on mountains.state_id = united_states.id;
+true|California
+true|Colorado
+true|Colorado
+true|Washington
