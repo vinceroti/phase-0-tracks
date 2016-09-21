@@ -1,12 +1,22 @@
-CREATE TABLE businesses (
-  id integer primary key,
-  name varchar(255)
-);
-
 create table users (
   id integer primary key,
   first varchar(255),
   last varchar(255)
+);
+
+create table reviews (
+  id integer primary key,
+  stars INT,
+  comment varchar(255),
+  business_id int,
+  user_id int,
+  FOREIGN KEY (business_id) references businesses(id),
+  FOREIGN KEY(user_id) references users(id)
+);
+
+CREATE TABLE businesses (
+  id integer primary key,
+  name varchar(255)
 );
 
 insert into businesses(name) values("Grundy Hollow Wedding Chapel");
@@ -24,3 +34,9 @@ insert into users(first, last) values("Steven", "Wonder");
 insert into users(first, last) values("Holly", "Berry");
 insert into users(first, last) values("Merryl", "Streepman");
 insert into users(first, last) values("Denzel", "George");
+
+insert into reviews(stars, comment, business_id, user_id) values(5, "Great Steak!", 1, 1);
+insert into reviews(stars, comment, business_id, user_id) values(3, "Food was bad, Server was great though" 1, 3);
+insert into reviews(stars, comment, business_id, user_id) values(1, "They clashed the **** outta my tires, waited 3 hours for their sorry asses to get there!!!", 2, 5);
+insert into reviews(stars, comment, business_id, user_id) values(4, "Had some drinks and met some great people after dealing with Amir's Towing!!", 3, 5);
+insert into reviews(stars, comment, business_id, user_id) values(5, "Bradford, was right! Great Steak at DA CHAPEL!!", 1, 7);
