@@ -4,6 +4,8 @@ First ask how many people are carpooling. If more then one allow for entry for m
 
 user entry includes, full name, age, and email
 
+If under 18, do not allow usage of this app.
+
 Store all information into database.
 
 If they are willing to drive,allow for entry of car data. Year, make, model, mileage (if car is 2010 or newer they can drive if not say "car is not eligible" Promote incentive for people who are driving.
