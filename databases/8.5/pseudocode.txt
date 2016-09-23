@@ -1,0 +1,16 @@
+Psuedocode for writing program that takes user information and stores it. Then takes information on where they are going, how many people, if they are driving.
+
+First ask how many people are carpooling. If more then one allow for entry for multiple users. 
+
+user entry includes, full name, age, and email
+
+Store all information into database.
+
+If they are willing to drive,allow for entry of car data. Year, make, model, mileage (if car is 2010 or newer they can drive if not say "car is not eligible" Promote incentive for people who are driving.
+
+Display what is entered so far by querying  the database.
+
+Ask the user where they are driving to. Farther they are going the more points they get!
+
+tell the user "Thanks! You will be notified by email when your carpool is ready!"
+end app
