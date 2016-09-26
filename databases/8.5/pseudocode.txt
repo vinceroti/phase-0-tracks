@@ -8,7 +8,7 @@ If under 18, do not allow usage of this app.
 
 Store all information into database.
 
-If they are willing to drive,allow for entry of car data. Year, make, model, mileage (if car is 2010 or newer they can drive if not say "car is not eligible" Promote incentive for people who are driving.
+If they are willing to drive,allow for entry of car data. Year, make, model(if car is 2010 or newer they can drive if not say "car is not eligible")
 
 Display what is entered so far by querying  the database.
 
