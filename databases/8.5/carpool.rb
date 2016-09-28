@@ -30,7 +30,7 @@ db.execute(create_table_users)
 
 p db.execute("SELECT * FROM users") #shows all users
 p db.execute("SELECT * FROM cars")
-p db.execute("SELECT users.name, users.location, cars.make FROM users, cars where users.name = cars.name") #shows all drivers
+p db.execute("SELECT users.name, users.location, cars.make FROM users, cars WHERE users.name = cars.name") #shows all drivers
 
 
 def create_cars(db)
