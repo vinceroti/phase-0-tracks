@@ -16,6 +16,10 @@ end
 get '/students/new' do
   erb :new_student
 end
+# http://localhost:4567/powder?name=Vince for dynamic text
+get '/powder' do
+  erb :powder
+end
 
 # create new students via
 # a form
