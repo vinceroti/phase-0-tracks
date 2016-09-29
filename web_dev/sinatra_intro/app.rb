@@ -73,7 +73,7 @@ get '/search/:name' do
   response = ""
   students.each do |student|
     name = student['name'].split(' ')
-    if name[0] == param || name[1] == param|| name[2] == param|| name == param.split(' ') #allows searching of first, last, suffix and full name!!!
+    if name[0] == param || name[1] == param || name[2] == param || name == param.split(' ') #allows searching of first, last, suffix and full name!!!
       response << "ID: #{student['id']}<br>"
       response << "Name: #{student['name']}<br>"
       response << "Age: #{student['age']}<br>"
