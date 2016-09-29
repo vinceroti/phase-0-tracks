@@ -21,10 +21,23 @@ get '/powder' do
   erb :powder
 end
 
+get '/accept' do
+  campuses = db.execute("SELECT campuses.city FROM campuses")
+  response = ""
+  campuses.each do |cities|
+    response << "#{cities['city']}<br>"
+  end
+  response
+end
+
 # create new students via
 # a form
 post '/students' do
   db.execute("INSERT INTO students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
+  city = db.execute("INSERT INTO campuses (city) VALUES (?)", params['city'])
+  if city
+    redirect '/accept'
+  end
   redirect '/'
 end
 
